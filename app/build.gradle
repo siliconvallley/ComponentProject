@@ -47,4 +47,8 @@ dependencies {
     // 循环引入第三方库
     supportLibrary.each { k, v -> implementation v }
 
+    if (isRelease) {
+        implementation project(":order")
+        implementation project(":personal")
+    }
 }
